@@ -1,0 +1,24 @@
+.accordion-container {
+    /* Change the margin value as desired */
+   
+ margin-right:450px ;
+  margin-left: 450px;
+ 
+  }
+  
+  .column-container {
+    margin: 0px; /* Change the margin value as desired */
+  }
+  
+  .text-container {
+    margin: 0px; /* Change the margin value as desired */
+  }
+  .main-title{
+    margin-right:450px ;
+  margin-left: 450px;
+  }
+  .main-title-underline{
+    margin-right:450px ;
+    margin-left: 450px;
+  }
+  
