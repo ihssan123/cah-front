@@ -44,6 +44,7 @@ export default function ColumnGroupingTable({cellValues ,matrix}) {
   const [page, setPage] = React.useState(0);
   const [rowsPerPage, setRowsPerPage] = React.useState(10);
 
+
   const handleChangePage = (event, newPage) => {
     setPage(newPage);
   };
@@ -59,12 +60,9 @@ export default function ColumnGroupingTable({cellValues ,matrix}) {
         <Table stickyHeader aria-label="sticky table">
           <TableHead>
             <TableRow>
-              <TableCell align="center" colSpan={2}>
-                Country
-              </TableCell>
-              <TableCell align="center" colSpan={3}>
-                Details
-              </TableCell>
+            <TableCell colSpan={columns.length} align="center">
+            CAH
+          </TableCell>
             </TableRow>
             <TableRow>
               {columns.map((column) => (
@@ -85,7 +83,7 @@ export default function ColumnGroupingTable({cellValues ,matrix}) {
                   <TableRow hover role="checkbox" tabIndex={-1} key={row.code}>
                     {columns.map((column) => {
                       const value = column.id === 'special§'? columns[rowindex+1].label : row[column.index];
-                      console.log(row,column.id,column.index);
+                     
                       return (
                         <TableCell key={column.id} align={column.align}>
                           {value}

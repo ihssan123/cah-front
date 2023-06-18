@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import "./FileUpload.css";
 import ColumnGroupingTable from "./ColumnGroupingTable";
-
+import CircularProgress from '@mui/joy/CircularProgress';
 const FileUpload = () => {
   const [selectedFile, setSelectedFile] = useState(null);
   const [matrix, setMatrix] = useState(undefined);
@@ -10,12 +10,15 @@ const FileUpload = () => {
   const [showTbale, setShowTbale] = useState(false);
   const [output,setOutput]=useState("");
   const [imagePath, setImagePath] = useState("");
+  const [isLoading, setIsLoading] = React.useState(false);
+ 
   
   const handleFileChange = (event) => {
     setSelectedFile(event.target.files[0]);
   };
 
   const handleFileUpload = () => {
+    setIsLoading(true);
     const formData = new FormData();
     formData.append("file", selectedFile);
     
@@ -38,6 +41,7 @@ const FileUpload = () => {
         setCellValues(cellValues);
         console.log(matrice,cellValues,output);
         setShowTbale(true);
+        setIsLoading(false);
         //<ColumnGroupingTable columns={cellValues} rows={matrix} />;
        
         
@@ -54,12 +58,18 @@ const FileUpload = () => {
         className="file-upload-input"
         onChange={handleFileChange}
       />
-      <button className="file-upload-button" onClick={handleFileUpload}>
+      {
+        isLoading ? <CircularProgress/> :
+        <button className="file-upload-button" onClick={handleFileUpload}>
         Upload
-      </button>
-
-      {matrix && showTbale &&  <ColumnGroupingTable cellValues={cellValues} matrix={matrix} />} 
-      {matrix && showTbale &&  <img src={imagePath} alt=""/>} 
+        </button>
+       }
+      
+       <p></p>
+       
+      {matrix && showTbale  &&  <ColumnGroupingTable cellValues={cellValues} matrix={matrix} />} 
+      <p></p>
+      {matrix && showTbale  &&  <img src={imagePath} alt=""/>} 
       
      
       

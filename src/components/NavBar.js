@@ -38,17 +38,7 @@ function NavBar() {
                 Test
               </NavLink>
             </li>
-            <li className="nav-item">
-              <NavLink
-                exact
-                to="/blog"
-                activeClassName="active"
-                className="nav-links"
-                onClick={handleClick}
-              >
-                Code
-              </NavLink>
-            </li>
+            
             <li className="nav-item">
               <NavLink
                 exact
@@ -57,7 +47,7 @@ function NavBar() {
                 className="nav-links"
                 onClick={handleClick}
               >
-                More
+                Regroupement
               </NavLink>
             </li>
           </ul>

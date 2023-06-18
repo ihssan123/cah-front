@@ -1,23 +1,22 @@
 export const data = [
-    {
-      question: "La Classification non supervise",
-      answer:
-        "Sed nec mollis quam. Cras rhoncus efficitur justo. Fusce ac rutrum est, in convallis turpis. Phasellus a enim et felis semper sodar. Sed rutrum lacinia leo.",
-    },
-    {
-      question: "la methode hiarchique ascendente ",
-      answer:
-        "Sed nec mollis quam. Cras rhoncus efficitur justo. Fusce ac rutrum est, in convallis turpis. Phasellus a enim et felis semper sodales eu a est. rutrum lacinia leo.",
-    },
-    {
-      question: "la distance de venshtein",
-      answer:
-        "Sed nec mollis quam. Cras rhoncus efficitur justo. Fusce ac rutrum est, in convallis turpis. Phasellus a enim et felis semper sodus gravida pulvinar. Sed rutrum lacinia leo.",
-    },
-    {
-      question: "Dendogramme",
-      answer:
-        "Sed nec mollis quam. Cras rhoncus efficitur justo. Fusce ac rutrum est, in convallis turpis. Phasellus a enim et felis semper sodales eu a es. Sed rutrum lacinia leo.",
-    },
-  ];
-  
+  {
+    question: "la classification non supervisée",
+    answer:
+      "L'apprentissage non supervisé consiste à apprendre sans superviseur. Il s'agit d'extraire des classes ou groupes d'individus présentant des caractéristiques communes. La qualité d'une méthode de classification est mesurée par sa capacité à découvrir certains ou tous les motifs cachés.",
+  },
+  {
+    question: "La classification ascendante hiérarchique (CAH) ",
+    answer:
+      "La classification ascendante hiérarchique (CAH) est une méthode de classification qui présente les avantages suivants : On travaille à partir des dissimilarités entre les objets que l'on veut regrouper. On peut donc choisir un type de dissimilarité adapté au sujet étudié et à la nature des données.",
+  },
+  {
+    question: "La distance de Levenshtein",
+    answer:
+      "La distance de Levenshtein est une distance, au sens mathématique du terme, donnant une mesure de la différence entre deux chaînes de caractères.",
+  },
+  {
+    question: "Un dendrogramme",
+    answer:
+      "est la représentation graphique d'une Classification Descendante Hiérarchique.",
+  },
+];
